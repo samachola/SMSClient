@@ -21,3 +21,23 @@ class TestStringMethods(unittest.TestCase):
 
 		app.clear_message_queue()
 
+	def test_clear_queue(self): 
+		app.add_message('sample message')
+		app.add_message('sample message 1')
+		app.add_message('sample message 2')
+
+		response = app.view_message_queue()
+		self.assertEqual(len(response), 3)
+
+		app.clear_message_queue()
+		response = app.view_message_queue()
+		self.assertEqual(len(response), 0)
+
+	def test_send_message(self):
+		app.add_message('sample message')
+
+		response = app.send_message()
+		print(response)
+
+		self.assertEqual(response, 'message sent successfully')
+
