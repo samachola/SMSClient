@@ -1,1 +1,1 @@
-https://travis-ci.com/samachola/SMSClient.svg
+[![Build Status](https://travis-ci.com/samachola/SMSClient.svg?branch=master)](https://travis-ci.com/samachola/SMSClient)
